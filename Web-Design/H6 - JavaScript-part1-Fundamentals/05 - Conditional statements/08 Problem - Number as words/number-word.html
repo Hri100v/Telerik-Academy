@@ -1,0 +1,76 @@
+<!--
+	Problem 8. Number as words
+
+Write a script that converts a number in the range [0…999] to words, 
+corresponding to its English pronunciation.
+Examples:
+
+numbers	number as words
+0	Zero
+9	Nine
+10	Ten
+12	Twelve
+19	Nineteen
+25	Twenty five
+98	Ninety eight
+98	Ninety eight
+273	Two hundred and seventy three
+400	Four hundred
+501	Five hundred and one
+617	Six hundred and seventeen
+711	Seven hundred and eleven
+999	Nine hundred and ninety nine
+-->
+
+<h1>Problem 8. Number as words</h1>
+<h4>please use console</h4>
+<p style="font-size: 0.7em">(F12, Ctrl+Shift+C)</p>
+	
+<script>
+	
+	// [0 - 12]
+	// [1 - 9] + teen
+	// [3 - 9] + ty  ->  !(fifty)!
+	// ===========================
+	
+	// [0 - 19]
+	// [20, 30 ... 90]
+	
+	var zeroToNinety = 
+			['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'
+            , 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen'
+          	, 'seventeen', 'eighteen', 'nineteen'],
+		tenTy = 
+			['twenty', 'thirty', 'fourty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'],
+		res = '',
+		testNum = '273';
+		
+	function numberAsWord(someNum) {
+		if (isNaN(someNum)) {
+			console.log('invalid number');
+		} else {
+			// Math.floor(n) take number mod
+			if (someNum > 99) {
+				res = res + zeroToNinety[Math.floor(someNum / 100)]
+						  + ' hundred';
+				if (someNum %= 100) {
+					res += ' and ';
+				} else return res; // 100, 200, 300...
+			}
+			if (someNum > 19) {
+				res += tenTy[Math.floor(someNum / 10 - 2)];
+				if (someNum %= 10) { // 14, 23, 37...
+					res += ' ' //+ zeroToNinety[Math.floor(someNum)];
+				} else return res; // 10, 20, 30...
+			} 
+			return res += zeroToNinety[someNum];
+		}
+	}	
+	
+	console.log(testNum);
+	numberAsWord(testNum);  
+	console.log(res[0].toUpperCase() + res.slice(1));
+	console.log('work...');
+
+</script>
+	

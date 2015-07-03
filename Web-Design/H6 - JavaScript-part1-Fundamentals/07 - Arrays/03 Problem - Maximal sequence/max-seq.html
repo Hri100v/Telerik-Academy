@@ -1,0 +1,37 @@
+<!-- Problem 3. Maximal sequence
+
+Write a script that finds the maximal sequence of equal elements in an array.
+Example:
+
+input							result
+2, 1, 1, 2, 3, 3, 2, 2, 2, 1	2, 2, 2 
+-->
+
+<h1>Problem 3. Maximal sequence</h1>
+<h4>please use console</h4>
+<p style="font-size: 0.7em">(F12, Ctrl+Shift+C)</p>
+
+<script>
+
+	var arrPr3 = [2, 1, 1, 2, 3, 3, 2, 2, 2, 1], 
+	r = [],
+	count = 0,
+	maxCount = -1,
+	repeatedEl;
+	console.log(arrPr3);
+
+	for (var i = 0; i < arrPr3.length - 1; i++) {
+	count = arrPr3[i] === arrPr3[i + 1] ? count += 1 : 1;
+
+		if (count > maxCount) {
+			// repeatedEl === arrPr3[i] ? r.push(repeatedEl) : r.splice(0, arrPr3.length); // make array with maximal sequence
+			maxCount = count;
+			repeatedEl = arrPr3[i];
+		};
+	};
+	for (var i = 0; i < maxCount; i++) {
+		r[i] = repeatedEl;
+	};
+	console.info('maximal sequence -> ' + r.join(', '));
+
+</script>

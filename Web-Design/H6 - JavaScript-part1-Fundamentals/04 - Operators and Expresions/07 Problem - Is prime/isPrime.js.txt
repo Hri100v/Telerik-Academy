@@ -1,0 +1,35 @@
+var n = [1, 2, 3, 4, 9, 37, 97, 51, -3, 0];
+// 	var lenA = n.length;
+// 	var start = 2
+// 	var i;
+	var isPrime = true;
+
+// for (var index = 0; index < n.length; index++) {
+// 	var numX = n[index];
+// 	for (var i = 2; i <= Math.sqrt(numX); i++) {
+// 	    if (numX % i == 0) {isPrime = false};
+// 	    // if (numX <= 1) {isPrime = false};
+// 	};
+// 	console.log(numX + ' ' + isPrime);
+// };
+	
+// console.log(n[0] <= 1)
+	
+var numX = 1;	
+for (var i = 2; i <= Math.sqrt(numX); i++) {
+	if (numX <= 1){
+		isPrime = false;
+	}
+	console.log(numX);
+	console.log(i);
+	if (numX % i == 0) {
+		isPrime = false;
+	}
+	// else {
+	// 	isPrime = true;
+	// }
+	// if (numX <= 1) {isPrime = false};
+	
+}
+
+console.log(isPrime);

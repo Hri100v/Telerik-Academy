@@ -1,0 +1,47 @@
+<!--ß
+Problem 6. Point in Circle
+
+Write an expression that checks if given point P(x, y) is within a circle K(O, 5).
+Examples:
+
+x		y		inside
+0		1		true
+-5		0		true
+-4		5		false
+1.5		-3		true
+-4		-3.5	false
+100		-30		false
+0		0		trueß
+0.2		-0.8	true
+0.9		-4.93	false
+2		2.655	true
+-->
+<h4>please use console</h4>
+<script>
+	//code
+	// x & y have same number of members
+	var xArray = [0, -5, -4, 1.5, -4];
+	var yArray = [1, 0, 5, -3, -3.5];
+	var inside = true;
+	// K(O, 5) => O(x = 0; y = 0); r = 5
+	var r = 5,
+		x = 0,
+		y = 0;
+	// P is inside in circle K
+	// (xp - x)^2 + (yp - y)^2 <= r^2 
+		
+	var rSquare = Math.pow(r, 2);
+	var index;
+	var len = xArray.length;
+	
+	console.log('x' + '\ty' + '\tinside');
+	for (index = 0; index < len; index+=1) {
+		var xp = xArray[index];
+		var yp = yArray[index];
+		var leftSide = (xp - x) * (xp - x) + (yp - y) * (yp - y);
+		inside = (leftSide <= rSquare);
+		console.log(xp + '\t%s',yp + '\t',inside);
+	}
+	
+	
+</script>

@@ -1,0 +1,46 @@
+<!-- Problem 3. Deep copy
+
+Write a function that makes a deep copy of an object.
+The function should work for both primitive and reference types. -->
+
+<h1>Problem 3. Deep copy</h1>
+<h4>please use console</h4>
+<p style="font-size: 0.7em">(F12, Ctrl+Shift+C)</p>
+<h5>description</h5>
+<p>Write a function that makes a deep copy of an object.
+The function should work for both primitive and reference types.</p>
+
+<script>
+
+	function deepCopy (member) {
+		if (typeof member !== 'object') {
+			return member;
+		}
+
+		var clone = {};
+			for (prop in member) {
+				clone[prop] = deepCopy(member[prop]);
+			}
+		return clone;
+	}
+
+	var person = {
+		firstName: 'Petyr',
+		lastName: 'Petrov',
+		age: 13
+	}
+
+	console.log('original');
+	console.log(person);
+	var nPerson = deepCopy(person);
+	var sPerson = person;
+
+	person.age = 18;
+	console.log(' -v- after little change -v- ');
+	console.log('shallow copy');
+	console.log(sPerson);
+
+	console.log('deep copy');
+	console.log(nPerson);
+
+</script>

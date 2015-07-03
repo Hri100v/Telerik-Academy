@@ -1,0 +1,34 @@
+<!-- Problem 4. Lexicographically smallest
+
+Write a script that finds the lexicographically smallest and largest property in document, window and navigator objects. -->
+
+<h1>Problem 4. Lexicographically smallest</h1>
+<h4>please use console</h4>
+<p style="font-size: 0.7em">(F12, Ctrl+Shift+C)</p>
+
+<script>
+
+	var all = [document, window, navigator];
+	// for(var prp in all)
+	// 	console.log(prp + '->' + all[prp]);
+
+	console.log(all);
+	
+	for(var prp of all) {
+		// console.log(prp + '->' + all[prp]);
+		var arrProp = [];
+		for(var el in prp) {
+			// console.log(el);
+			// console.log('xxx -> ',prp[el]);
+
+			// arrProp = prp[el];
+			// arrProp.push(prp[el]);
+			arrProp.push(el);
+		}
+
+		arrProp.sort();
+
+		console.log('smallest: ', arrProp.shift() + '\nlargest: ', arrProp.pop());
+
+	}
+</script>

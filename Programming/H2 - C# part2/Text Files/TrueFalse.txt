@@ -1,0 +1,60 @@
+1. Tom gets up at 10am on Sundays.
+
+    True
+
+    False
+
+2. Tom reads the newspaper in the lounge.
+
+    True
+
+    False
+
+3. His father lives in Scotland.
+
+    True
+
+    False
+
+4. Tom plays tennis with his sister.
+
+    True
+
+    False
+
+5. Tom and his sister eat before playing tennis.
+
+    True
+
+    False
+
+6. Tom goes swimming at five o'clock.
+
+    True
+
+    False
+
+7. Tom drives to his brother's house.
+
+    True
+
+    False
+
+8. Tom and his brother listen to music.
+
+    True
+
+    False
+
+9. Tom drinks a glass of wine in the evening.
+
+    True
+
+    False
+
+10. Tom goes to bed at 11.30pm.
+
+    True
+
+    False
+

@@ -1,0 +1,114 @@
+<html>
+	<head>
+		<title>Windows Calculator</title>
+		<style>
+			.size {
+				width: 450px;
+			}
+			table.box-calc, th, td {
+				/*width: 410px;*/
+				border: 1px solid black;
+				font-family: arial;
+				border-radius: 5px;
+			}
+			table.box-calc thead tr {
+				widows: 100%;
+				background-color: #c4dcf5;
+				border-radius: 5px;
+			}
+			table.box-calc thead th {
+				font-weight: 400;
+			}
+			.box-calc th img:first-child {
+				border: 1px solid black;
+				float: left;
+				position: relative;
+			}
+			.box-calc th img:nth-child(3){
+				border: 1px solid blue;
+				/*float: right;*/
+			}
+			.box-calc th label {
+				text-align: left;
+			}
+
+			/* table container */
+			table.container tr{
+				/*width: 350px;*/
+			}
+			table.container thead th textarea {
+				outline: none;
+				/*max-width: 100%;*/
+				width: 99%;
+				background-color: #c4dcf5;
+				resize: none;
+				border: none;
+				font-size: 24px;
+				font-weight: bold;
+				text-align: right;
+				vertical-align: bottom;
+				/*border: 4px solid black;*/
+				/*min-width: 250px;*/
+			}
+		</style>
+	</head>
+	<body>
+		<table class="box-calc size">
+			<thead>
+				<tr>
+					<th>
+						<img src="images/calc.png" alt="calc-icon">
+						<!-- <label for="calculator">Calculator</label>
+						<img src="images/win.png" alt="win-icon"> -->
+					</th>
+					<th>
+						<label for="calculator">Calculator</label>
+					</th>
+					<th>
+						<img src="images/win.png" alt="win-icon">
+					</th>
+				</tr>
+			</thead>
+			<tbody>	
+				<tr>
+				<td colspan="3">
+					<table class="container size">
+						<thead class="size">
+							<tr>
+								<th>View</th>
+								<th>Edit</th>
+								<th>Help</th>
+							</tr>
+							<tr>
+								<th colspan="3">
+									<textarea placeholder="0" cols="32" rows="1"></textarea>
+								</th>
+							</tr>
+						</thead>
+						<tfoot>
+
+						</tfoot>
+						<tbody>
+							<tr>
+								<td>0000</td>
+								<td>0000</td>
+								<td>0000</td>
+								<td>0000</td>
+								<td>0000</td>
+								<td>0000</td>
+								<td>0000</td>
+								<td>0000</td>
+							</tr>
+							<tr>
+								<td colspan="4">63</td>
+								<td colspan="3">47</td>
+								<td>32</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>

@@ -1,0 +1,60 @@
+<!--
+	Problem 3. The biggest of Three
+
+Write a script that finds the biggest of three numbers.
+Use nested if statements.
+Examples:
+
+a		b		c		biggest
+5		2		2		5
+-2		-2		1		1
+-2		4		3		4
+0		-2.5	5		5
+-0.1	-0.5	-1.1	-0.1
+-->
+<h1>Problem 3. The biggest of Three</h1>
+<h4>please use console</h4>
+<p style="font-size: 0.7em">(F12, Ctrl+Shift+C)</p>
+	<label for="a">a = </label>
+	<input type="text" id="a" size="4"/>
+	<label for="b">b = </label>
+	<input type="text" id="b" size="4"/>
+	<label for="c">c = </label>
+	<input type="text" id="c" size="4"/>
+	<br />
+	<a href="#" onclick="onClickBiggest()">Biggest is</a>
+<div id="contain"></div>
+	
+<script>
+	
+	function onClickBiggest() {
+		'use strict';
+		var result = '';
+		var a = document.querySelectorAll('#a')[0].value;
+		var b = document.querySelectorAll('#b')[0].value;
+		var c = document.querySelectorAll('#c')[0].value;
+//		var a = 2,
+//			b = 3,
+//			c = 1;
+//		please try with this if you find mistakes
+		var biggest;
+		
+		if (a > b) {
+			if (a > c) {
+				biggest = a;
+			} else {
+				biggest = c;
+			}
+		} else {
+			if (b > c) {
+				biggest = b;
+			} else {
+				biggest = c;
+			}
+		}
+		
+		result = a + ' ' + b + ' ' + c + ' biggest is: ' + biggest;
+		document.getElementById('contain').innerHTML = biggest;
+		console.log(result);
+	}
+</script>

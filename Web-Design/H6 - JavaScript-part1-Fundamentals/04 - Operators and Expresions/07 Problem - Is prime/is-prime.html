@@ -1,0 +1,50 @@
+<!--ß
+Problem 7. Is prime
+
+Write an expression that checks if given positive integer number n (n ≤ 100) is prime.
+Examples:
+
+n	Prime?
+1	false
+2	true
+3	true
+4	false
+9	false
+37	true
+97	true
+51	false
+-3	false
+0	false
+-->
+<h1>Problem 7. Is prime</h1>
+<h4>please use console</h4>
+<p style="font-size: 0.7em">(F12, Ctrl+Shift+C)</p>
+
+
+	<script type="text/javascript">
+		var x = [1, 2, 3, 37, 40, 97];
+		var n = [1, 2, 3, 4, 9, 37, 97, 51, -3, 0];
+		var isPrime;
+		
+		function prime (argument) {
+			// body...
+			isPrime = true;
+			var numX = argument;
+			if (numX < 0)
+				isPrime = false;	
+			for (var i = 2; i <= Math.sqrt(numX); i++) {
+				if (numX <= 1){
+					isPrime = false;
+				}
+				if (numX % i == 0) {
+					isPrime = false;
+				}
+			}
+			console.log(numX + ' -> ' + isPrime);
+		}
+
+		 for (var i = 0; i < n.length; i++) {
+		 	console.log(prime(n[i]));
+		 };
+		 
+	</script>

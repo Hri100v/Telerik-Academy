@@ -1,0 +1,48 @@
+<!-- Problem 1. English digit
+
+Write a function that returns the last digit of given integer as an English word.
+Examples:
+
+input	output
+512		two
+1024	four
+12309	nine -->
+
+<h1>Problem 1. English digit</h1>
+<h4>please use console</h4>
+<p style="font-size: 0.7em">(F12, Ctrl+Shift+C)</p>
+
+<script>
+	
+	var input = [512, 1024, 12309];
+
+	function lastDigitAsWord (num) {
+		// body...
+		var d = num % 10;
+		switch (d) {
+			case 0: return 'zero';
+			case 1: return 'one';
+			case 2: return 'two';
+			case 3: return 'three';
+			case 4: return 'four';
+			case 5: return 'five';
+			case 6: return 'six';
+			case 7: return 'seven';
+			case 8: return 'eight';
+			case 9: return 'nine';
+			default: return 'incorect digit'; //break;
+		}
+
+	};
+
+	for (item in input) {
+		console.log(lastDigitAsWord(input[item]));
+	}
+
+	// inoput.forEach(lastDigitAsWord) {
+	// 	output = lastDigitAsWord(item);
+	// 	console.log(output);
+	// }
+	// output = lastDigitAsWord(input[0]);
+	// console.log(output);
+</script>

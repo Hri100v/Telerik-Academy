@@ -1,0 +1,30 @@
+<!-- 
+Problem 1. Odd or Even
+
+Write an expression that checks if given integer is odd or even.
+Examples:
+
+n	Odd?
+3	true
+2	false
+-2	false
+-1	true
+0	false 
+please  use  console in html
+-->
+
+<script>
+	"use strict";
+	// var n = [3, 2, -2, -1, 0];
+	var n = [3, 2, -2, -1, 0];
+	oddOrEven(n);
+	function oddOrEven (arg) {
+		var isOdd;
+		for (var i = 0; i < n.length; i++) {
+			isOdd = ((n[i] % 2) !== 0);
+			console.log('%d is odd -> %s', n[i], isOdd);
+		};
+	}
+	
+	
+</script>

@@ -1,0 +1,56 @@
+<!-- Problem 5. Appearance count
+
+Write a function that counts how many times given number appears in given array.
+Write a test function to check if the function is working correctly. -->
+
+<h1>Problem 5. Appearance count</h1>
+<h4>please use console</h4>
+<p style="font-size: 0.7em">(F12, Ctrl+Shift+C)</p>
+
+<script>
+
+	var testArray = [1, 2, 5, 11, 3, 1, 41, 1, 221, 78, 1, 87, 1, 1],
+	num = 1,
+	counter;
+	console.log(testArray);
+
+	function countAppear (num, array) {
+		counter = 0;
+		for (var i = 0; i < array.length; i++) {
+			if (num === array[i]) {
+				counter += 1;
+			}
+		}
+		// return counter;
+		console.log('number "%s" repeated - %d time(s)', num, counter);
+	};
+
+	countAppear(num, testArray);
+
+	function getRandomInt (min, max) {
+		// default value for min & max
+		min = min || 0;
+		max = max || 100;
+		return Math.floor(Math.random() * (max - min) + min);
+	}
+
+	function testFun () {
+		var randArr = [];
+		var key = getRandomInt(0, 5) //  searching number always is between [0; 5]
+		var repeat = getRandomInt(4, 55); // interval 4 - 55
+		for (var i = 0; i < repeat; i++) {
+			randArr.push(getRandomInt(0, 15)); // members [0; 15] 
+		};
+		console.log('- members of array -');
+		console.log(randArr.join(', '));
+		countAppear(key, randArr);
+		console.log(' ');
+
+	};
+
+
+	testFun();
+	testFun();
+	testFun();
+
+</script>

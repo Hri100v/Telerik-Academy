@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<style type="text/css">
+	table { 
+		/*display: table;
+		border-collapse: separate;*/
+		border-style: solid; 
+		border-color: #456498;
+		background-color: rgb(91,148,222);
+	}
+	th {
+		/*text-align: right;*/
+	}
+	th textarea { width: 96%; height: 70%; resize: none; text-align: right;}
+	td {
+		width: 41px;
+		height: 41px;
+	}
+	button {
+		display: block;
+		width: 100%;
+		height: 100%;
+		font-size: 1.5em;
+		font-weight: bold;
+		color: #456498;
+	}
+	</style>
+</head>
+<body>
+
+<table id="calculator">
+	<!-- <caption>calculator</caption> -->
+	<thead>
+		<tr >
+			<th colspan="4" abbr="input">
+				<textarea></textarea>
+			</th>
+		</tr>
+	</thead>
+	<tfoot><!-- missing '=' --></tfoot>
+	<tbody>
+		<tr>
+			<td><button type="button">1</button></td>
+			<td><button type="button">2</button></td>
+			<td><button type="button">3</button></td>
+			<td><button type="button">+</button></td>
+		</tr><!-- 1st row -->
+		<tr>
+			<td><button type="button">4</button></td>
+			<td><button type="button">5</button></td>
+			<td><button type="button">6</button></td>
+			<td><button type="button">-</button></td>
+		</tr><!-- 2st row -->
+		<tr>
+			<td><button type="button">7</button></td>
+			<td><button type="button">8</button></td>
+			<td><button type="button">9</button></td>
+			<td><button type="button">*</button></td>
+		</tr><!-- 3st row -->
+		<tr>
+			<td colspan="2"><button type="button">0</button></td>
+			<td><button type="button">.</button></td>
+			<td><button type="button">/</button></td>
+		</tr><!-- 4st row -->
+	</tbody>
+</table>
+
+</body>
+</html>

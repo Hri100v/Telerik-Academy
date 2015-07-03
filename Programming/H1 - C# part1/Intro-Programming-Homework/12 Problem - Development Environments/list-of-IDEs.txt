@@ -1,0 +1,28 @@
+Eclipse----------
+Eclipse is IDE. That is created most ever with Java and can use for this programing language. 
+With different plugins can write and other p. languages like Eclipse ADT for ADA, 
+Eclipse CDT for C\C++, Eclipse PDT for PHP.
+
+NetBeans---------
+Is integrated development environment with translation on 23 languages. With open source. 
+Netbeans is extremely extensible via its plugin-centric design, allowing you to add additional 
+language syntax support and libraries, among other things. Netbeans is free under the 
+Common Development and Distribution License (CDDL) v1.0 and GNU General Public License (GPL) v2.
+
+Visual Studio----
+Visual Studio is the definitive IDE for Windows application development, look no further
+than to Microsoft's own developer toolset. Visual Studio products cover languages like 
+C++, C# and VB.NET. In addition, you are also able to develop for the Windows x86, 
+Windows RT, and Windows Phone.
+
+Code::Blocks----
+Unlike the other products seen thus far, Code::Blocks, which is built on the wxWidgets framework, 
+is exceptionally lightweight in size, yet still quite functional and feature-rich IDE. You can 
+load up a number of under-the-hood compiler engines, ranging from GCC and LLVM, to Digital Mars 
+and Open Watcom. Code::Blocks also takes advantage of multi-core compiling, allowing you to get 
+the job done faster. Code::Blocks is distributed under the GPL v3.0 license which means it can be 
+used freely by anyone.
+
+Aptana Studio---
+It is another IDE for web and scripting languages in more cases, Aptana is greate for this.
+PHP, Ruby on Rails, and Python are supported as well as the likes of Adobe AIR.

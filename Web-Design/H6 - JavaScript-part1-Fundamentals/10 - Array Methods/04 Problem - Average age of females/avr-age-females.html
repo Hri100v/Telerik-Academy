@@ -1,0 +1,56 @@
+<!-- Problem 4. Average age of females
+
+Write a function that calculates the average age of all females, extracted from an array of persons
+Use Array#filter
+Use only array methods and no regular loops (for, while) -->
+
+<h1>Array Methods</h1>
+<h2>Problem 4. Average age of females</h2>
+<h4>please use console <i>(and Sources for more details)</i></h4>
+<p style="font-size: 0.7em">(F12, Ctrl+Shift+C)</p>
+<h5>description</h5>
+<pre>
+Write a function that calculates the average age of all females, extracted from an array of persons
+	- Use Array#filter
+	- Use only array methods and no regular loops (for, while)
+</pre>
+
+<script>
+
+function Person (fname, lname, age, gender) {
+		this.firstName = fname,
+		this.lastName = lname,
+		this.age = age,
+		this.gender = gender//(!!gender ? 'female' : 'male');
+	};
+
+var people2 = [
+			new Person('Maria', 'Blagoeva', 19, true),
+			new Person('Petyr', 'Georgiev', 17, false),
+			new Person('Ivan', 'Dimitrov', 15, false),
+			new Person('Lidia', 'Lilova', 22, true),
+			new Person('Dimana', 'Dimitrova', 24, true)
+
+	];
+
+
+function avrAgeOnlyFemale (peopleArr) {
+	var avrAge = 0,
+		count = 0,
+		arrFemale = peopleArr.filter(function castFemale(f) {
+			return f.gender;
+		});
+
+	arrFemale.forEach(function calc (female) {
+		count++;
+		avrAge += female.age;
+	})
+	avrAge = (avrAge / count).toFixed(2)
+	return 'Average ' + avrAge + ' years';
+
+}
+
+var result = avrAgeOnlyFemale(people2);
+console.log(result)
+
+</script>

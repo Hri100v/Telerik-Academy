@@ -1,0 +1,80 @@
+<!-- Problem 6.
+
+Write a function that groups an array of people by age, first or last name.
+The function must return an associative array, with keys - the groups, and values - arrays with people in this groups
+Use function overloading (i.e. just one function)
+
+Example:
+
+var people = {…};
+var groupedByFname = group(people, 'firstname');
+var groupedByAge= group(people, 'age'); -->
+
+<h1>Problem 6...</h1>
+<h4>please use console</h4>
+<p style="font-size: 0.7em">(F12, Ctrl+Shift+C)</p>
+<h5>description</h5>
+<pre>
+Write a function that groups an array of people by age, first or last name.
+The function must return an associative array, with keys - the groups, and values - arrays with people in this groups
+Use function overloading (i.e. just one function)
+
+Example:
+
+var people = {…};
+var groupedByFname = group(people, 'firstname');
+var groupedByAge= group(people, 'age');
+</pre>
+
+<script>
+	
+	
+	function Person (fname, lname, age) {
+		this.firstName = fname,
+		this.lastName = lname,
+		this.age = age
+	}
+
+	var people = [
+			new Person('Strahil', 'Strandjev', 32),
+			new Person('Nikodim', 'Popdimitrov', 69),
+			new Person('Gosho', 'Petrov', 32),
+			new Person('Bay', 'Ivan', 84),
+			new Person('Bay', 'Petrov', 81)
+		];
+
+
+	function assocArray (key, value) {
+		var obj = {};
+		obj[key] = value;
+		return obj;	
+	}
+
+	var age = 'age',
+		firstName = 'firstName',
+		lastName = 'lastName';
+
+	function group (array, prop) {
+		var result;
+
+		array.forEach(function (val, b, c) {
+			var key = val[prop];
+
+			var value = c.filter(function (a) {
+				return a[prop] === key
+			})
+			console.log(key)
+			console.log(value)
+			result = assocArray(key, value)
+		})
+
+		return result;
+	}
+
+
+	var groupedByFname = group(people, firstName);
+	var groupedByAge = group(people, age);
+	var groupedByLname = group(people, lastName);
+	console.log(groupedByAge)
+		
+</script>

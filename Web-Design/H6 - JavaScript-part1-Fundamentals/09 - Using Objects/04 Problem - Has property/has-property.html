@@ -1,0 +1,47 @@
+<!-- Problem 4. Has property
+
+Write a function that checks if a given object contains a given property.
+
+var obj  = …;
+var hasProp = hasProperty(obj, 'length'); -->
+
+<h1>Problem 4. Has property</h1>
+<h4>please use console</h4>
+<p style="font-size: 0.7em">(F12, Ctrl+Shift+C)</p>
+<h5>description</h5>
+<p>Write a function that checks if a given object contains a given property.
+
+var obj  = …;
+var hasProp = hasProperty(obj, 'length');</p>
+
+<script>
+
+	var obj = {
+		some: 'text',
+		num: 123,
+		'of course': 'Pesho'
+	}
+	console.log(obj.hasOwnProperty('some'));
+	console.log(obj['of course']);
+	
+	function hasProperty (obj, prop) {
+		// var hasProp = true;
+		// 	if (!!obj[p]) {
+				// hasProp = true;
+		// 	} else {
+		// 		hasProp = false;
+		// 	}
+		// 
+		// return hasProp;
+		return !!obj[prop];
+	}
+
+	console.log('test with different key');
+	console.log(' - num');
+	console.log(hasProperty(obj, 'num'));
+	console.log(' - of course');
+	console.log(hasProperty(obj, 'of course'));
+	console.log(' - length');
+	console.log(hasProperty(obj, 'length'));
+
+</script>

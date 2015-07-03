@@ -1,0 +1,37 @@
+<!-- Problem 2. Reverse number
+
+Write a function that reverses the digits of given decimal number.
+Example:
+
+input	output
+256		652
+123.45	54.321 
+-->
+
+<h1>Problem 2. Reverse number</h1>
+<h4>please use console</h4>
+<p style="font-size: 0.7em">(F12, Ctrl+Shift+C)</p>
+
+<script>
+
+	var input = [256, 123.45];
+	
+	function revNumber (someNumber) {
+		var result = '',
+			numStr = someNumber.toString();
+
+		for(index in numStr) {
+			var len = numStr.length - 1;
+			result += numStr[len - index];
+		}
+		console.log(result);
+	}
+
+	for (d of input) {
+		console.log(revNumber(d));
+	}
+
+	// revNumber(256);
+	// revNumber(123.45);
+
+</script>

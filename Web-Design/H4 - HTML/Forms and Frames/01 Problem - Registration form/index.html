@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration form</title>
+	<meta charset="UTF-8">
+	<style type="text/css">
+	fieldset {
+		border: transparent;
+		width: 450px;
+	}
+	table {
+		border-style: solid;
+		border-width: 1px;
+		width: 100%;
+		border-collapse: collapse;
+		border-color: gray;
+	}
+	tr {
+		border: solid;
+		border-width: 1px;
+	}
+	td {
+		border: solid;
+		border-width: 1px;
+	}
+	td:first-child {
+		text-align: center;
+		width: 40%;
+		font-weight: bold;
+	}
+	/*td:nth-child(2) {
+		width: 65%;
+	} */
+	#fname, #lname, #email { width: 250px; }
+	#address, #comm-q {
+		min-width: 240px;
+		min-height: 70px;
+	}
+	#state { width: 50px; }
+	#zip-pcode { width: 70px;}
+	#country { width: 173px;}
+	/*PHONE*/
+	#phone-fpart { width: 40px;}
+	#phone-spart { width: 40px;}
+	#phone-thpart { width: 50%;}
+	/*tfoot {
+
+		text-align: center;
+		vertical-align: bottom;
+	}*/
+	
+	</style>
+</head>
+<body>
+<form method="get" action="further.php">
+	<fieldset>
+		<table>
+			<tfoot>
+				<tr>
+					<td colspan="2">
+						<input type="submit" name="submit" id="submit" value="Submit">
+						<input type="reset" value="Clean This Form">
+					</td>
+				</tr>
+			</tfoot>
+			<tbody>
+				<tr>
+					<td>
+						<label for="lname">Last Name</label>
+					</td>
+					<td>
+						<input type="text" name="lname" id="lname" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="fname">First Name</label>
+					</td>
+					<td>
+						<input type="text" name="fname" id="fname">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="address">Address</label>
+					</td>
+					<td>
+						<textarea name="address" id="address"></textarea>
+						<!-- <input type="text" name="address" id="address"> -->
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="city">City</label>
+					</td>
+					<td>
+						<input type="text" name="city" id="city">
+						<label for="state">State</label>
+						<input type="text" name="state" id="state">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="zip-pcode">Zip/Postal Code</label>
+					</td>
+					<td><input type="text" name="zip-pcode" id="zip-pcode">
+					</td>
+				</tr><!-- END Zip/PostalCode -->
+				<tr><!-- Country -->
+					<td>
+						<label for="country">Country</label>
+					</td>
+					<td>
+						<select name="country" id="country">
+							<option value="alb">Albania</option>
+							<option value="bul" selected="selected">Bulgaria</option>
+							<option value="braz">Brazil</option>
+							<option value="germ">Germany</option>
+						</select>
+					</td>
+				</tr><!-- END Country -->
+				<tr>
+					<td>
+						<label for="phone">Phone(country code,&#8203area code,number)</label>
+					</td>
+					<td>
+						(+<input type="text" name="phone" id="phone-fpart">)
+						<input type="text" name="phone" id="phone-spart">
+						<input type="text" name="phone" id="phone-thpart">
+					</td>
+				</tr><!-- END Phone -->
+				<tr>
+					<td>
+						<label for="email">E-mail</label>
+					</td>
+					<td>
+						<input type="text" name="email" id="email">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="bdate">Birth date</label>
+					</td>
+					<td>
+						<input type="datetime" name="bdate" id="bdate" placeholder="дд . мм . гггг г.">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="gender">Gender</label>
+					</td>
+					<td>
+						<select name="gender" id="gender">
+							<option value="male">Male</option>
+							<option value="female">Female</option>
+						</select>
+					</td>
+				</tr><!-- END Gender -->
+				<tr>
+					<td>
+						<label for="start-date">Starting date</label>
+					</td>
+					<td>
+						<input type="radio" name="start-date" id="spring" value="spring2015"><label for="spring">Spring 2015</label>
+						<input type="radio" name="start-date" id="summer" value="summer2015"><label for="summer">Summer 2015</label>
+					</td>
+				</tr><!-- END Start date -->
+				<tr><!-- END Comm / Quest -->
+					<td>
+						<label for="comm-q">Comments/Questions</label>
+					</td>
+					<td>
+						<textarea name="comm-q" id="comm-q"></textarea>
+					</td>
+				</tr><!-- END Comm / Quest -->
+			</tbody><!-- END T-BODY -->
+		</table><!-- END T A B L E -->	
+	</fieldset>
+</form>
+</body>
+</html>

@@ -1,0 +1,69 @@
+﻿section {
+    font-family: arial;
+    background-color: #595959;
+    padding: 50px 0px 50px 20px;
+    color: white;
+    width: 350px;
+}
+
+h1 {
+    font-weight: normal;
+    color: #bfbfbf;
+}
+
+dt {
+    float: left;
+    clear: left;
+    width: 120px;
+    font-style: italic;
+}
+
+dd  {
+    margin: 0 0 20px 150px;
+    font-size: 15px;
+    font-style: normal;
+    color: #fff4b2;
+    position: relative;
+    top: 1px;
+}
+
+p {
+    margin: 0px 0 10px 0;
+    vertical-align: top;
+    
+}
+
+dd:nth-child(2) p:first-child:before {
+    content: "•";
+    font-size: 50px;
+    line-height: 16px;
+    vertical-align: top;
+    color: #71b47a;
+}
+
+dd:nth-child(2) p:nth-child(2) {
+    color: #fe0508;
+    font-weight: bold;
+}
+
+p span {
+    font-size: 25px;
+    vertical-align: top;
+}
+
+/* RESPONSE TIME */
+dd:nth-child(6) {
+    color: #bcbebf;
+}
+
+/* LAST ACTION */
+dd:nth-child(8) p:first-child {
+    color: #bcbebf;
+    margin-bottom: 20px;
+}
+
+/* STATUS */
+dd:last-child {
+    font-weight: bold;
+    color: #e46b1d;
+}

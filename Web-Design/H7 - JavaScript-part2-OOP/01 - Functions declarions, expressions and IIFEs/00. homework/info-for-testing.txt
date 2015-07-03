@@ -1,0 +1,6 @@
+need > nodeJS
+in CommandPrompt with destination [00.homework] > npm test
+loading... (test ready)
+
+
+PS: in Explorer > cmd [where write directory] > Enter > ...

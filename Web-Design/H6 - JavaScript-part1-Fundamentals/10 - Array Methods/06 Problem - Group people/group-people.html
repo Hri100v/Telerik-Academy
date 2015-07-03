@@ -1,0 +1,86 @@
+<!-- Problem 6. Group people
+
+Write a function that groups an array of persons by first letter of first name and returns the groups as a JavaScript Object
+Use Array#reduce
+Use only array methods and no regular loops (for, while)
+Example:
+
+    result = {
+        'a': [{
+            firstname: 'Asen',
+            /* ... */
+        }, {
+            firstname: 'Anakonda',
+            /* ... */
+        }],
+        'j': [{
+            firstname: 'John',
+            /* ... */
+        }]
+    }; -->
+
+
+<h1>Array Methods</h1>
+<h2>Problem 6. Group people</h2>
+<h4>please use console <i>(and Sources for more details)</i></h4>
+<p style="font-size: 0.7em">(F12, Ctrl+Shift+C)</p>
+<h5>description</h5>
+<pre>
+Write a function that groups an array of persons by first letter of first name and returns the groups as a JavaScript Object
+    Use Array#reduce
+    Use only array methods and no regular loops (for, while)
+
+Example:
+
+    result = {
+        'a': [{
+            firstname: 'Asen',
+            /* ... */
+        }, {
+            firstname: 'Anakonda',
+            /* ... */
+        }],
+        'j': [{
+            firstname: 'John',
+            /* ... */
+        }]
+    };
+</pre>
+
+<script>
+
+function Person (fname, lname, age, gender) {
+        this.firstName = fname,
+        this.lastName = lname,
+        this.age = age,
+        this.gender = gender//(!!gender ? 'female' : 'male');
+    };
+
+
+var people1 = [
+            new Person('Strahil', 'Strandjev', 32, false),
+            new Person('Nikodim', 'Popdimitrov', 69, false),
+            new Person('Gosho', 'Petrov', 32, false),
+            new Person('Bay', 'Ivan', 84, false),
+            new Person('Bay', 'Petrov', 81, false)
+        ];  
+
+function grouped (arr) {
+    var result;
+
+    result = arr.reduce(function(group, member) {
+        
+        if (group[member.firstName[0]]) { // has person with same first latter push to array
+            group[member.firstName[0]].push(member);
+        } else { //hasn`t that person
+            group[member.firstName[0]] = [member];
+        }
+        return group;
+    }, {})
+
+    return result;
+}
+
+console.log(grouped(people1))
+
+</script>

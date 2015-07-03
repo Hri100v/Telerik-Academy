@@ -1,0 +1,25 @@
+4.54543523454543523453452345234543
+
+12344/2222
+
+5456.
+
+4 + 7/8 I
+
+IntegerLength[123456789]
+
+DiscretePlot[IntegerLength[n], {n, -25, 25}]
+
+RealDigits[123.55555]
+
+RealDigits[0.000012355555]
+
+RealDigits[Pi, 10, 20]
+
+(4 + 3 I)/(2 - I)
+
+Reduce[E^x - 5 x + Log[2 x] + 1 == 0, x, Reals]
+
+Root[{#1^2 - 2 &, #2^5 + #1 #2 + 1 &}, {2, 1}]
+
+0	1	2	3	4	5	6	7	8	9

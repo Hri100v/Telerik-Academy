@@ -1,0 +1,40 @@
+<!-- Problem 6. Most frequent number
+
+Write a script that finds the most frequent number in an array.
+Example:
+
+input									result
+4, 1, 1, 4, 2, 3, 4, 4, 1, 2, 4, 9, 3	4 (5 times)
+ -->
+
+<h1>Problem 5. Selection sort</h1>
+<h4>please use console</h4>
+<p style="font-size: 0.7em">(F12, Ctrl+Shift+C)</p>
+
+<script>
+	
+	var input = [4, 1, 1, 4, 2, 3, 4, 4, 1, 2, 4, 9, 3],
+	result = '',
+	count = 1,
+	largeCount = -1,
+	mostRepeat;
+
+	for (var i = 0; i < input.length; i++) {
+		count = 1;
+		for (var k = i + 1; k < input.length; k++) {
+			if (input[i] === input[k]) {
+				count += 1;
+			};
+
+			if (largeCount < count) {
+				largeCount = count;
+				mostRepeat = input[i];
+			};
+		};
+		
+	};
+
+	console.log(input.join(', ') + '\nresult: %d (%s times)', mostRepeat, largeCount);
+
+	
+</script>

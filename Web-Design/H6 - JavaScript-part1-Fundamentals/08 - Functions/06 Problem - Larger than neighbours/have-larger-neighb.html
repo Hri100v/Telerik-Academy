@@ -1,0 +1,37 @@
+<!-- Problem 6. Larger than neighbours
+
+Write a function that checks if the element at given position in given array of integers 
+is bigger than its two neighbours (when such exist).
+ -->
+
+<h1>Problem 6. Larger than neighbours</h1>
+<h4>please use console</h4>
+<p style="font-size: 0.7em">(F12, Ctrl+Shift+C)</p>
+
+<script>
+
+	var array = [ 1, 15, 45, 23, 48, 22, 21, 55, 4, 8, 9, 6, 11 ];
+	function hasLargerNeighb (position, array) {
+		// var position = argument[0],
+		// 	array = argument[1];
+		var left = array[(position - 1)] === undefined, 
+			right = array[(position + 1)] === undefined,
+			isTrue;
+
+		// var isTrue = (array[position - 1] < array[position]) && (array[position] > array[position + 1]);
+		if (left) {	// check have members on left side
+			isTrue = array[position] > array[position + 1];
+		} else if (right) { // check have members on right side
+			isTrue = array[position - 1] < array[position];
+		} else { 
+			isTrue = (array[position - 1] < array[position]) && (array[position] > array[position + 1]);
+		}
+
+		console.log(array);
+		console.log(isTrue);
+		console.log(position + ' -> ' + array[position]);
+	}
+
+	hasLargerNeighb(2, array);
+
+</script>

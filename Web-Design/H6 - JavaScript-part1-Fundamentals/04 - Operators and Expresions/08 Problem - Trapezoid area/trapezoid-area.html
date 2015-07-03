@@ -1,0 +1,36 @@
+<!-- 
+Problem 8. Trapezoid area
+
+Write an expression that calculates trapezoid's area by given sides a and b and height h.
+Examples:
+
+a		b		h		area
+5		7		12		72
+2		1		33		49.5
+8.5		4.3		2.7		17.28
+100		200		300		45000
+0.222	0.333	0.555	0.1540125
+ -->
+ 
+<h4>please use console</h4>
+<p style="font-size: 0.7em">(F12, Ctrl+Shift+C)</p>
+
+
+<script type="text/javascript">
+	// trapezoid
+	// area ((a + b) / 2) * h
+	var a = 8.5;
+	var b = 4.3;
+	var h = 2.7;
+	
+	function areaValue (sideA, sideB, h) {
+		// body...
+		var area = ((sideA + sideB) / 2) * h;
+		return area;
+	}
+
+	console.log(areaValue(a, b, h));
+	console.log(areaValue(5, 7, 12));
+	console.log(areaValue(0.222, 0.333, 0.555));
+	
+</script>

@@ -1,2 +1,2 @@
-# Telerik-Academy
+# Telerik Academy
 Telerik Academy Tasks

@@ -1,0 +1,29 @@
+<!-- Problem 3. Min/Max of sequence
+
+Write a script that finds the max and min number from a sequence of numbers. -->
+
+<h1>Problem 3. Min/Max of sequence</h1>
+<h4>please use console</h4>
+<p style="font-size: 0.7em">(F12, Ctrl+Shift+C)</p>
+
+<script>
+	
+	var n = [1, 2,3, 4,5, 6, 7,11,-6,21.9, 21],
+		max,
+		min,
+		i,
+		len;
+	len = n.length;
+	max = min = n[0];
+	console.log(n);
+
+	for (i = 1; i < len; i+=1) {
+		if (min > n[i])
+			min = n[i];
+		if (max < n[i])
+			max = n[i];
+	};
+
+	console.log('min = ', min + '\nmax = ', max);
+
+</script>

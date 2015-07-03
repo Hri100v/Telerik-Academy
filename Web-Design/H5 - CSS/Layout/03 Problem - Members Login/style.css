@@ -1,0 +1,92 @@
+body {
+	margin: 0;
+	padding: 0;
+	/*background-color: #131313;*/
+	width: 750px;
+	height: 480px;
+	color: white;
+}
+
+header {
+	/*margin: 0;*/
+	background-color: #3B3B3B;
+	padding: 5px;
+	/*border: 1px solid white;*/
+	width: 650px;
+	font-family: Georgia, serif, 'Arial Narrow';
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+}
+form { 
+	display: inline-block; 
+	vertical-align: middle;
+	margin: 0;
+	position: absolute;
+  	top: 22;
+  	word-spacing: 10px;
+}
+/*form a {
+	display: inline-block;
+}*/
+header a {
+	position: absolute;
+  	left: 535;
+    top: -13;
+}
+header > a img {
+	float: right;
+	position: absolute;
+  	left: 450;
+  	top: -10;
+  	width: 65px;
+}
+header label {
+	display: inline-block;
+	padding: 0 10px 10px 12px;
+	font-weight: 600;
+	font-size: 20px;
+	word-spacing: 3px;
+}
+header input {
+	display: inline-block;
+	margin-right: 8px;
+	max-width: 150px;
+}
+header input[type="submit"] {
+	/*background: url(images/bg2.png) no-repeat fixed center;*/
+	/*background-image: url(images/bg2.png);*/
+	/*border: none;*/
+}
+main {
+	padding: 5px;
+	background-color: #3B3B3B;
+	box-shadow: 0 -4px 6px rgba(37, 37, 37, 0.5);
+	/*border: 1px solid white;*/
+	width: 650px;
+	/*line-height: normal;*/
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+article {
+	padding: 5px;
+	font-family: Georgia, arial;
+}
+h2 {
+	font-weight: normal;
+	/*font-size: 1.5em;*/
+	font-size: 1.8em;
+	color: rgb(249, 211, 38);
+}
+p {
+	margin: 0;
+	/*display: block;*/
+	font-family: 'Lucida Sans Unicode', 'Lucida Console', Courier, 'Arial Narrow', Verdana, Trebuchet MS, Georgia, arial;
+	font-size: 13px;
+	font-weight: 100;
+	max-width: 600px;
+	color: #ccc;
+}
+p a {
+	text-decoration: none;
+	color: white;
+}

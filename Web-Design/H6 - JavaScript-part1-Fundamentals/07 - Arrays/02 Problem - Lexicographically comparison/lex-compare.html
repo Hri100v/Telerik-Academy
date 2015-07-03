@@ -1,0 +1,37 @@
+<!-- Problem 2. Lexicographically comparison
+
+Write a script that compares two char arrays lexicographically (letter by letter). -->
+
+<h1>Problem 2. Lexicographically comparisons</h1>
+<h4>please use console</h4>
+<p style="font-size: 0.7em">(F12, Ctrl+Shift+C)</p>
+
+<script>
+	
+	var arr1 = 'abc'.split(''),
+		arr2 = 'abd'.split('');
+
+
+	// console.log(a.charAt());
+
+	function lexCompare (arrayOne, arrayTwo) {
+		// body...
+		var i = 0,
+			len1 = arrayOne.length,
+			len2 = arrayTwo.length,
+			optimalLen = Math.min(len1, len2),
+			compare, r;
+
+		console.log(arrayOne, ' <=> ', arrayTwo);
+		for (i = 0; i < optimalLen; i+=1) {
+			compare = arrayOne[i].charCodeAt() - arrayTwo[i].charCodeAt();
+			r = compare > 0 ? ' bigger than ' : compare < 0 ? ' smaller than ' : ' equal to ';
+			console.log(arrayOne[i] + r + arrayTwo[i]);
+		};
+
+	}
+
+	lexCompare(arr1, arr2);
+
+
+</script>

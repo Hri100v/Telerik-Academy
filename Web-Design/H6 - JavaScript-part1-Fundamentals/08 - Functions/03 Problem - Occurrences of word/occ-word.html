@@ -1,0 +1,54 @@
+<!-- Problem 3. Occurrences of word
+
+Write a function that finds all the occurrences of word in a text.
+The search can be case sensitive or case insensitive.
+Use function overloading. -->
+
+<h1>Problem 3. Occurrences of word</h1>
+<h4>please use console</h4>
+<p style="font-size: 0.7em">(F12, Ctrl+Shift+C)</p>
+
+<script>
+
+	var input = "Lorem Ipsum is simply dummy text. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Text about Lorem Ipsum.";
+	var words = input.split(' ');
+	var key = 'text';
+	console.log(input);
+
+	function occuranceOfWord (text, word, caseSens) {
+		// text = text.split('.').join('').split(' ');
+		var wordsInText = [];
+		var counter = 0;
+		caseSens = isNaN(word) && (caseSens || 0); /// default value
+		console.log('-------------------');
+		switch(caseSens) {
+			case 0: // case insensitive
+				wordsInText = text.split('.').join('').toLowerCase().split(' ');
+				occurCount(wordsInText, word);
+				console.log('case insensitive' + '\n[%s] occurrences of word "%s"', counter, word); 
+				break;
+			case 1: // case sensitive
+				// tempWord = word; 
+				wordsInText = text.split('.').join('').split(' ');
+				occurCount(wordsInText, word);
+				console.log('case sensitive' + '\n[%s] occurrences of word "%s"', counter, word);
+				break;
+			default:
+				console.log('invalid data');
+		}
+
+		function occurCount (array, word) {
+			for (i in array) {
+				if (word === array[i]) {
+					counter += 1;
+				}
+			}
+			return counter;
+		};
+	}
+
+	occuranceOfWord(input, key);
+	occuranceOfWord(input, key, 1);
+	occuranceOfWord(input, key, 4);
+
+</script>

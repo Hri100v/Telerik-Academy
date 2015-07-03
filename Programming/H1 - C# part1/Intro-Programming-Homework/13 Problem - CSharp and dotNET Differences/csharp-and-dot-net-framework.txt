@@ -1,0 +1,4 @@
+C# and .NETframework
+_______________________________________________________________
+C# is programing language developed by Microsoft for .NET
+.NET is collection of Microsoftlibraries. This is use for codding with C# and VB.

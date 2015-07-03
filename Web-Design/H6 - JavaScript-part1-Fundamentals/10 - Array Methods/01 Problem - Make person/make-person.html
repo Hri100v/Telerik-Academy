@@ -1,0 +1,67 @@
+<!-- Problem 1. Make person
+
+Write a function for creating persons.
+Each person must have firstname, lastname, age and gender (true is female, false is male)
+Generate an array with ten person with different names, ages and genders -->
+
+<h1>Array Methods</h1>
+<h2>Problem 1. Make person</h2>
+<h4>please use console</h4>
+<p style="font-size: 0.7em">(F12, Ctrl+Shift+C)</p>
+<h5>description</h5>
+<pre>
+Write a function for creating persons.
+Each person must have firstname, lastname, age and gender (true is female, false is male)
+Generate an array with ten person with different names, ages and genders -->
+</pre>
+
+<script>
+	
+	function getRandomInt (min, max) {
+	min = min || 0;
+	max = max || 100;
+	return Math.floor(Math.random() * (max - min) + min);
+}
+
+function buildPerson (firstname, lastname, age, gender) {
+	var person = {
+		firstname: firstname,
+		lastname: lastname,
+		age: age,
+		gender: (!!gender ? 'female' : 'male')
+	}
+
+	return person;
+}
+
+function randomWord () {
+	var possibile = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+	var word = possibile[getRandomInt(0,26)];
+	var i, len = getRandomInt(3, 10);
+	for (i = 1; i < len; i+=1) {
+		word += possibile[getRandomInt(27,52)];
+	}
+	return word;
+}
+
+function test () {
+	var tenPersons = 10,
+		k, 
+		personArray = [];//new Array(tenPersons);
+	for (k = 0; k < tenPersons; k += 1) {
+		var fname = randomWord(),
+			lname = randomWord(),
+			age = getRandomInt(0, 111), //age from 0 - 111 years
+			gender = !!getRandomInt(0,2);
+
+		personArray[k] = buildPerson(fname, lname, age, gender);
+	};
+	return personArray;
+}
+
+var arrPersons = test();
+console.log(arrPersons); //.join(';\n'));
+
+
+
+</script>

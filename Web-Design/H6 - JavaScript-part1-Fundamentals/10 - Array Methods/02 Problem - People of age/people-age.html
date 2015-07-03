@@ -1,0 +1,51 @@
+<!-- Problem 2. People of age
+
+Write a function that checks if an array of person contains only people of age (with age 18 or greater)
+Use only array methods and no regular loops (for, while) -->
+
+<h1>Array Methods</h1>
+<h2>Problem 2. People of age</h2>
+<h4>please use console <i>(and Sources for more details)</i></h4>
+<p style="font-size: 0.7em">(F12, Ctrl+Shift+C)</p>
+<h5>description</h5>
+<pre>
+Write a function that checks if an array of person contains only people of age (with age 18 or greater)
+Use only array methods and no regular loops (for, while)
+</pre>
+
+<script>
+	
+	function Person (fname, lname, age) {
+		this.firstName = fname,
+		this.lastName = lname,
+		this.age = age
+	};
+
+	var people1 = [
+				new Person('Strahil', 'Strandjev', 32),
+				new Person('Nikodim', 'Popdimitrov', 69),
+				new Person('Gosho', 'Petrov', 32),
+				new Person('Bay', 'Ivan', 84),
+				new Person('Bay', 'Petrov', 81)
+			],
+		people2 = [
+				new Person('Maria', 'Blagoeva', 19),
+				new Person('Petyr', 'Georgiev', 17),
+				new Person('Ivan', 'Dimitrov', 15)
+		]
+
+	function checkGreater (arrayPersons) {
+		// body... (with age 18 or greater)
+		var check = arrayPersons.every(function (member) {
+			return member.age >= 18;
+		})
+		return check;
+	}
+
+	console.log(people1)
+	console.log(checkGreater(people1))
+	console.log('\n')
+	console.log(people2)
+	console.log(checkGreater(people2))
+		
+</script>

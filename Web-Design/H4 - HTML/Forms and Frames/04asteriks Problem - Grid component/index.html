@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Grid component</title>
+	<style type="text/css">
+		table{
+			width: 1150px;
+		 	border-collapse: collapse;
+		}
+		thead tr:nth-child(2) {
+			background-color: rgb(226,227,230);
+		}
+		thead input {
+		 	max-width: 100px;
+		 	margin: 0 15px 0 15px;
+		}
+		th { 
+			white-space: normal;
+			height: 45px; 
+			padding: 0;
+			font-style: normal;
+			text-decoration: none;
+		}
+		button { 
+			border: 0;
+			padding: 0;
+			height: 100%;
+			width: 100%;
+		}
+		tfoot td { 
+			/*padding: 0px;
+			width: 420px;
+			display: inline-block; */
+			background-color: #E0E0E0;
+		}
+		tfoot input {
+			background-color: #E0E0E0;
+			border: 0;
+		}
+		tfoot label	{ padding-left: 30px;}
+		#info {
+			display: inline;
+		  	margin-left: 390px;
+		    padding-left: 20px;
+		    padding-right: 10px;
+			text-align: right;
+		}
+
+	</style>
+</head>
+<body>
+	<form name="grid-comp" id="grid-comp">
+		<table id="tbase" border="1">
+			<!-- <caption>Drag a column header and drop it here to group by that column</caption> -->
+			<label>Drag a column header and drop it here to group by that column</label>
+			<thead>
+				<tr>
+					<th><button name="prod-id" id="prod-id">ProductID</button></th>
+					<th><button name="prod-name" id="prod-name">Product Name</button></th>
+					<th><button name="uprice" id="uprice">Unit price</button></th>
+					<th><button name="quantity" id="quantity">Quantity per unit</button></th>
+					<th><button name="ustock" id="ustock">Units in stock</button></th>
+					<th><button name="discont" id="discont">Discontinued</button></th>
+				</tr>
+				<tr>
+					<th><input type="text" name="pr-id" id="pr-id"></th>
+					<th><input type="text" name="prod-name" id="pr-name"></th>
+					<th>
+						<input type="text" name="uprice" id="u-price">
+						<input type="image" src="images\icon.png" name="uprice" id="u-price-button">
+					</th>
+					<th><input type="text" name="quantity" id="q-per-unit"></th>
+					<th>
+						<input type="text" name="ustock" id="u-stock">
+						<input type="image" src="images\icon.png" name="ustock" id="u-stock-img">
+					</th>
+					<th>
+						<input type="checkbox" name="discont" id="disc-chk">
+						<input type="image" src="images\icon.png" name="discont" id="disc-img">
+					</th>
+				</tr>
+			</thead>
+			<tfoot>
+				<tr>
+					<td colspan="6">
+						<input type="button" name="start" id="start" value="&#65513">
+						<input type="button" name="previous" id="previous" value="<">
+						<input type="button" id="one" value="1">
+						<input type="button" id="two" value="2">
+						<input type="button" id="three" value="3">
+						<input type="button" id="four" value="4">
+						<input type="button" id="five" value="5">
+						<input type="button" id="six" value="6">
+						<input type="button" id="seven" value="7">
+						<input type="button" id="eight" value="8">
+						<input type="button" id="nine" value="9">
+						<input type="button" id="ten" value="10">
+						<input type="button" id="dots" value="...">
+						<input type="button" name="next" id="next" value=">">
+						<input type="button" name="end" id="end" value="&#65515">
+						<label for="pages">Page size:</label>
+						<select name="pages" id="pages">
+							<option value="5">5</option>
+							<option value="10" selected="selected">10</option>
+							<option value="15">15</option>
+						</select>
+						<div id="info"><label>335104 items in 33511 pages</label></div>
+					</td>
+				</tr>
+			</tfoot>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>Chai</td>
+					<td>&#36;18.00</td>
+					<td>10 boxes x 20 bags</td>
+					<td>39</td>
+					<td><input type="checkbox"></td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Chang</td>
+					<td>&#36;19.00</td>
+					<td>24 - 12 oz bottles</td>
+					<td>17</td>
+					<td><input type="checkbox"></td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>Aniseed Syrup</td>
+					<td>&#36;10.00</td>
+					<td>12 - 550 ml bottles</td>
+					<td>13</td>
+					<td><input type="checkbox"></td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>Chef Anton`s Cajun Seasoning</td>
+					<td>&#36;22.00</td>
+					<td>48 - 6 oz jars</td>
+					<td>53</td>
+					<td><input type="checkbox"></td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td>Chef Anton`s Gumbo Mix</td>
+					<td>&#36;21.35</td>
+					<td>36 boxes</td>
+					<td>0</td>
+					<td><input type="checkbox"></td>
+				</tr>
+				<tr>
+					<td>6</td>
+					<td>Grandma`s Boysenberry Spread</td>
+					<td>&#36;25.00</td>
+					<td>12 - 8 oz jars</td>
+					<td>120</td>
+					<td><input type="checkbox"></td>
+				</tr>
+				<tr>
+					<td>7</td>
+					<td>Uncle Bob`s Organic Dried Pears</td>
+					<td>&#36;30.00</td>
+					<td>12 - 1 lb pkgs.</td>
+					<td>15</td>
+					<td><input type="checkbox"></td>
+				</tr>
+				<tr>
+					<td>8</td>
+					<td>Northwoods Cranberry Sauce</td>
+					<td>&#36;40.00</td>
+					<td>12 - 12 oz jars</td>
+					<td>6</td>
+					<td><input type="checkbox"></td>
+				</tr>
+				<tr>
+					<td>9</td>
+					<td>Mishi Kobe Niku</td>
+					<td>&#36;97.00</td>
+					<td>18 - 500 g pkgs.</td>
+					<td>29</td>
+					<td><input type="checkbox"></td>
+				</tr>
+				<tr>
+					<td>10</td>
+					<td>Ikura</td>
+					<td>&#36;31.00</td>
+					<td>12 - 200 ml jars</td>
+					<td>31</td>
+					<td><input type="checkbox"></td>
+				</tr>
+			</tbody>
+		</table>
+	</form>
+</body>
+</html>

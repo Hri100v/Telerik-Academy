@@ -1,0 +1,105 @@
+<!-- Problem 1. Planar coordinates
+
+Write functions for working with shapes in standard Planar coordinate system.
+Points are represented by coordinates P(X, Y)
+Lines are represented by two points, marking their beginning and ending L(P1(X1,Y1), P2(X2,Y2))
+Calculate the distance between two points.
+Check if three segment lines can form a triangle. -->
+
+<h1>Problem 1. Planar coordinates</h1>
+<h4>please use console</h4>
+<p style="font-size: 0.7em">(F12, Ctrl+Shift+C)</p>
+<h5>description</h5>
+<p>Write functions for working with shapes in standard Planar coordinate system.
+Points are represented by coordinates P(X, Y)
+Lines are represented by two points, marking their beginning and ending L(P1(X1,Y1), P2(X2,Y2))
+Calculate the distance between two points.
+Check if three segment lines can form a triangle.</p>
+
+<script>
+
+	function buildPoint (x, y) {
+		var pointer = {
+			x: x,
+			y: y,
+			coord: function () {
+				return ('(' + this.x + ', ' + this.y + ')');
+			}
+		}
+		return pointer;
+	}
+
+var p1 = buildPoint(2, 3),
+	p2 = buildPoint(1, 7);
+
+function buildLine (p1, p2) {
+	var liner = {
+		p1: p1,
+		p2: p2,
+		show: function () {
+			return '[P1' + this.p1.coord() + ', P2' + this.p2.coord() + ']';
+		},
+		dist: function () {
+			// d = sqrt[ (x2 - x1)^2 + (y2 - y1)^2 ]
+			var d,
+				xPw = (this.p2.x - this.p1.x) * (this.p2.x - this.p1.x),
+				yPw = (this.p2.y - this.p1.y) * (this.p2.y - this.p1.y);
+			d = Math.sqrt(xPw + yPw);
+			return d.toFixed(2) * 1;
+		}
+
+	}
+	return liner;
+}
+
+var line1 = buildLine(p1, p2);
+
+// console.log(line1.show());
+// console.log(line1.dist());
+
+function print () {
+	console.log('Point -> ' + buildPoint(3, 4).coord());
+	console.log('Line with coordinates -> ' + line1.show());
+}
+
+print();
+
+var ap1 = buildPoint(120, 4),
+	ap2 = buildPoint(7, 9),
+	a = buildLine(ap1, ap2),
+	b = line1,
+	cp1 = buildPoint(0, 7),
+	cp2 = buildPoint(3, 7),
+	c = buildLine(cp1, cp2);
+
+
+
+function isTriangle (a, b, c) {
+	var distA = a.dist(),
+		distB = b.dist(),
+		distC = c.dist(),
+		isTrue = true;	
+	if (distA + distB < distC) {isTrue = false;}
+	if (distB + distC < distA) {isTrue = false;}
+	if (distA + distC < distB) {isTrue = false;}
+	// return isTrue;
+	console.log('It is posible to form triangle -> ' + isTrue);
+};
+
+console.log(a.show() + b.show() + c.show());
+isTriangle(a, b, c);
+console.log('-------------------------');
+var vp1 = buildPoint(0,0),
+	vp2 = buildPoint(0,3),
+	wp1 = buildPoint(0,3),
+	wp2 = buildPoint(3,7),
+	up1 = buildPoint(3,7),
+	up2 = buildPoint(0,0),
+	v = buildLine(vp1, vp2),
+	w = buildLine(wp1, wp2),
+	u = buildLine(up1, up2);
+
+console.log(v.show() + w.show() + u.show());
+isTriangle(v, w, u);
+
+</script>

@@ -1,0 +1,58 @@
+<!--
+	Problem 6. Quadratic equation
+
+Write a script that reads the coefficients a, b and c of a quadratic equation ax2 + bx + c = 0 
+and solves it (prints its real roots).
+Calculates and prints its real roots.
+Note: Quadratic equations may have 0, 1 or 2 real roots.
+
+Examples:
+
+a		b	c	roots
+2		5	-3	x1=-3; x2=0.5
+-1		3	0	x1=3; x2=0
+-0.5	4	-8	x1=x2=4
+5		2	8	no real roots
+-->
+<h1>Problem 6. Quadratic equation</h1>
+<h4>please use console</h4>
+<p style="font-size: 0.7em">(F12, Ctrl+Shift+C)</p>
+<script>
+	
+	var a = '2',
+		b = 5,
+		c = -3,
+		diskr, x1, x2, dblA;
+
+//	ax2 + bx + c = 0 	
+//	D = b2 - 4ac 
+
+	function solveQE(a, b, c) {
+		a = +a;
+		b *= 1;
+		c ^= 0;
+		if (a !== 0) {
+			
+			diskr = b * b - 4 * a * c;
+			dblA = 2 * a;
+			
+			if (diskr < 0) {
+				console.log('no real roots');
+			} else if (diskr === 0) {
+				// x1=x2=b/2a
+				x1 = b / dblA;
+				console.log('x1 = x2 = ' + x1);	
+			} else {
+				x1 = (-b - Math.sqrt(diskr)) / dblA;
+				x2 = (-b + Math.sqrt(diskr)) / dblA
+				console.log('x1 = ' + x1 + '; x2 = ' + x2);	
+			}
+			
+		}
+	}
+	
+	solveQE(a, b, c);
+	solveQE(-0.5, 4, -8);
+	solveQE(5, 2, 8);
+	
+</script>

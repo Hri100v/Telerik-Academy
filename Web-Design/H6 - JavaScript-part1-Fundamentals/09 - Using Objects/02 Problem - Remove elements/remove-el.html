@@ -1,0 +1,42 @@
+<!-- Problem 2. Remove elements
+
+Write a function that removes all elements with a given value.
+Attach it to the array type.
+Read about prototype and how to attach methods.
+
+var arr = [1,2,1,4,1,3,4,1,111,3,2,1,'1'];
+arr.remove(1); //arr = [2,4,3,4,111,3,2,'1']; -->
+
+<h1>Problem 2. Remove elements</h1>
+<h4>please use console</h4>
+<p style="font-size: 0.7em">(F12, Ctrl+Shift+C)</p>
+<h5>description</h5>
+<p>Write a function that removes all elements with a given value.
+Attach it to the array type.
+Read about prototype and how to attach methods.
+
+var arr = [1,2,1,4,1,3,4,1,111,3,2,1,'1'];
+arr.remove(1); //arr = [2,4,3,4,111,3,2,'1'];</p>
+
+<script>
+
+	var arr = [1,2,1,4,1,3,4,1,111,3,2,1,'1'];
+
+	Array.prototype.remove = function (item) {
+		// body...
+		var clearArray = [],
+			i,
+			len = this.length;
+		for (i = 0; i < len; i += 1) {
+			// console.log(i + ' -> ' + this[i]);
+			if(this[i] !== item)
+				clearArray.push(this[i]);
+		};
+		return clearArray;
+	}
+
+	var newArr = arr.remove(1);
+	console.log(arr);
+	console.log(newArr);
+
+</script>

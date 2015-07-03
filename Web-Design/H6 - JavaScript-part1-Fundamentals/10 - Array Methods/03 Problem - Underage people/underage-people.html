@@ -1,0 +1,59 @@
+<!-- Problem 3. Underage people
+
+Write a function that prints all underaged persons of an array of person
+Use Array#filter and Array#forEach
+Use only array methods and no regular loops (for, while) -->
+
+<h1>Array Methods</h1>
+<h2>Problem 3. Underage people</h2>
+<h4>please use console <i>(and Sources for more details)</i></h4>
+<p style="font-size: 0.7em">(F12, Ctrl+Shift+C)</p>
+<h5>description</h5>
+<pre>
+Write a function that prints all underaged persons of an array of person
+Use Array#filter and Array#forEach
+Use only array methods and no regular loops (for, while)
+</pre>
+
+<script>
+
+function Person (fname, lname, age) {
+		this.firstName = fname,
+		this.lastName = lname,
+		this.age = age
+	};
+
+var people1 = [
+			new Person('Strahil', 'Strandjev', 32),
+			new Person('Nikodim', 'Popdimitrov', 69),
+			new Person('Gosho', 'Petrov', 32),
+			new Person('Bay', 'Ivan', 84),
+			new Person('Bay', 'Petrov', 81)
+		],
+	people2 = [
+			new Person('Maria', 'Blagoeva', 19),
+			new Person('Petyr', 'Georgiev', 17),
+			new Person('Ivan', 'Dimitrov', 15)
+	]
+
+
+function underaged (array) {
+	// body...
+	var underAge = 69;
+	var arrange = array.filter(function (mem) {
+		return (mem.age <= underAge);
+	});
+
+	console.log('first name |' + ' last name |' + ' age')
+	console.log('......................................')
+	arrange.forEach(function represent (person) {
+		// body...
+		console.log(person.firstName + ' | ' + person.lastName + ' | ' + person.age)
+	})
+}
+
+underaged(people1)
+console.log(' ')
+underaged(people2)
+
+</script>
