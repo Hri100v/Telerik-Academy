@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Methods", "Methods\Methods.csproj", "{C041AAA8-7BA0-4385-A678-1D9003C1952D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Problem02 - CSharp 2 exam solutions", "Problem02 - CSharp 2 exam solutions", "{ABF804AB-610C-465D-A2AB-13D8137F35D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 1 - Some numeral system", "Problem 1 - Some numeral system\Problem 1 - Some numeral system.csproj", "{E5C9DC79-8B5D-4FC2-A6BD-44BD290EE210}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 2 - Maybe matrix", "Problem 2 - Maybe matrix\Problem 2 - Maybe matrix.csproj", "{CE4B3F6F-6A64-4C3C-8582-6903288FC3B4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C041AAA8-7BA0-4385-A678-1D9003C1952D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C041AAA8-7BA0-4385-A678-1D9003C1952D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C041AAA8-7BA0-4385-A678-1D9003C1952D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C041AAA8-7BA0-4385-A678-1D9003C1952D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5C9DC79-8B5D-4FC2-A6BD-44BD290EE210}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5C9DC79-8B5D-4FC2-A6BD-44BD290EE210}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5C9DC79-8B5D-4FC2-A6BD-44BD290EE210}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5C9DC79-8B5D-4FC2-A6BD-44BD290EE210}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE4B3F6F-6A64-4C3C-8582-6903288FC3B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE4B3F6F-6A64-4C3C-8582-6903288FC3B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE4B3F6F-6A64-4C3C-8582-6903288FC3B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE4B3F6F-6A64-4C3C-8582-6903288FC3B4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E5C9DC79-8B5D-4FC2-A6BD-44BD290EE210} = {ABF804AB-610C-465D-A2AB-13D8137F35D5}
+		{CE4B3F6F-6A64-4C3C-8582-6903288FC3B4} = {ABF804AB-610C-465D-A2AB-13D8137F35D5}
+	EndGlobalSection
+EndGlobal

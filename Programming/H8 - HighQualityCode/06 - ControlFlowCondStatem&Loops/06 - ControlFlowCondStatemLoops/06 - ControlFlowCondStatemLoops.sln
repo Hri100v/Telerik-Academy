@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01 MasterChef", "MasterChef\01 MasterChef.csproj", "{99555CB4-6F9E-4619-AA97-3572A5D055C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02 IfStatements", "IfStatements\02 IfStatements.csproj", "{C334D65F-E7B8-4323-9882-0F9369600F45}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03 LoopStatement", "03 LoopStatement\03 LoopStatement.csproj", "{A5B79C0E-92B8-4330-B65A-AECDDF51581E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04asteriks MyFirstCSharpExam", "04asteriks MyFirstCSharpExam", "{D04F2E07-6104-44A7-9F04-EF0C4BCEDDD9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 01 - A-B-C", "Problem 01 - A-B-C\Problem 01 - A-B-C.csproj", "{2AC126BE-4DCC-4C1F-B95E-2FDE74415434}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 02 - SymbolToNumber", "02 Problem - SymbolToNumber\Problem 02 - SymbolToNumber.csproj", "{0475810E-5430-43AB-A41A-C6C0EBF66271}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 03 - ConsoleApplication2", "Problem 03 - ConsoleApplication2\Problem 03 - ConsoleApplication2.csproj", "{01BB1093-AA60-41DC-884E-9A0F4C1FAFAD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{99555CB4-6F9E-4619-AA97-3572A5D055C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99555CB4-6F9E-4619-AA97-3572A5D055C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99555CB4-6F9E-4619-AA97-3572A5D055C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99555CB4-6F9E-4619-AA97-3572A5D055C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C334D65F-E7B8-4323-9882-0F9369600F45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C334D65F-E7B8-4323-9882-0F9369600F45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C334D65F-E7B8-4323-9882-0F9369600F45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C334D65F-E7B8-4323-9882-0F9369600F45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5B79C0E-92B8-4330-B65A-AECDDF51581E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5B79C0E-92B8-4330-B65A-AECDDF51581E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5B79C0E-92B8-4330-B65A-AECDDF51581E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5B79C0E-92B8-4330-B65A-AECDDF51581E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AC126BE-4DCC-4C1F-B95E-2FDE74415434}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AC126BE-4DCC-4C1F-B95E-2FDE74415434}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AC126BE-4DCC-4C1F-B95E-2FDE74415434}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AC126BE-4DCC-4C1F-B95E-2FDE74415434}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0475810E-5430-43AB-A41A-C6C0EBF66271}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0475810E-5430-43AB-A41A-C6C0EBF66271}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0475810E-5430-43AB-A41A-C6C0EBF66271}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0475810E-5430-43AB-A41A-C6C0EBF66271}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01BB1093-AA60-41DC-884E-9A0F4C1FAFAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01BB1093-AA60-41DC-884E-9A0F4C1FAFAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01BB1093-AA60-41DC-884E-9A0F4C1FAFAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01BB1093-AA60-41DC-884E-9A0F4C1FAFAD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2AC126BE-4DCC-4C1F-B95E-2FDE74415434} = {D04F2E07-6104-44A7-9F04-EF0C4BCEDDD9}
+		{0475810E-5430-43AB-A41A-C6C0EBF66271} = {D04F2E07-6104-44A7-9F04-EF0C4BCEDDD9}
+		{01BB1093-AA60-41DC-884E-9A0F4C1FAFAD} = {D04F2E07-6104-44A7-9F04-EF0C4BCEDDD9}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>StringExtensions</name>
+    </assembly>
+    <members>
+        <member name="T:Telerik.ILS.Common.StringExtensions">
+            <summary>
+            Class String Extensions. Only for training with little more description.
+            <list type="bullet">
+                <listheader>
+                    <term>Class String Extensions</term>
+                    <description>Description about this class</description>
+                </listheader>
+                <item>
+                    <description>ToMd5Hash,</description>
+                </item>
+                <item>
+                    <description>ToBoolean,</description>
+                </item>
+                <item><description>ToShort,</description></item>
+                <item><description>ToInteger,</description></item>
+                <item><description>ToLong,</description></item>
+                <item><description>ToDateTime,</description></item>
+                <item><description>CapitalizeFirstLetter,</description></item>
+                <item><description>GetStringBetween,</description></item>
+                <item><description>ConvertCyrillicToLatinLetters,</description></item>
+                <item><description>ConvertLatinToCyrillicKeyboard,</description></item>
+                <item><description>ToValidUsername,</description></item>
+                <item><description>ToValidLatinFileName,</description></item>
+                <item><description>GetFirstCharacters,</description></item>
+                <item><description>GetFileExtension,</description></item>
+                <item><description>ToContentType,</description></item>
+                <item><description>ToByteArray,</description></item>
+            </list>
+            </summary>
+        </member>
+        <member name="M:Telerik.ILS.Common.StringExtensions.ToMd5Hash(System.String)">
+            <summary>
+            That is a method that return from input string to a byte array
+            and compute the hash for each symbols.
+            </summary>
+            <param name="input">the input value must be 'string'</param>
+            <returns>A hexadecimal string</returns>
+        </member>
+        <member name="M:Telerik.ILS.Common.StringExtensions.ToBoolean(System.String)">
+            <summary>
+            The method check for positive boolean value
+            </summary>
+            <param name="input">Expect some bool value like a string</param>
+            <returns>Boolean value (True/False) according of input value</returns>
+        </member>
+        <member name="M:Telerik.ILS.Common.StringExtensions.ToShort(System.String)">
+            <summary>
+            Convert string number to short number
+            </summary>
+            <param name="input">Must be a string number</param>
+            <returns>number from type short</returns>
+        </member>
+        <member name="M:Telerik.ILS.Common.StringExtensions.ToInteger(System.String)">
+            <summary>
+            Convert string number to integer number
+            </summary>
+            <param name="input">Must be a string number</param>
+            <returns>number from type integer</returns>
+        </member>
+        <member name="M:Telerik.ILS.Common.StringExtensions.ToLong(System.String)">
+            <summary>
+            Convert string number to long number
+            </summary>
+            <param name="input">Must be a string number</param>
+            <returns>number from type long</returns>
+        </member>
+        <member name="M:Telerik.ILS.Common.StringExtensions.ToDateTime(System.String)">
+            <summary>
+            Convert 'Date Time string' type to DateTime type
+            </summary>
+            <param name="input">Must be string in DateTime format</param>
+            <returns>true if <paramref name="input"/> was converted successfully; otherwise,
+            false.</returns>
+        </member>
+        <member name="M:Telerik.ILS.Common.StringExtensions.CapitalizeFirstLetter(System.String)">
+            <summary>
+            This method capitalizes the first letter from a given string
+            </summary>
+            <param name="input">String that intended to change</param>
+            <returns>String with a capitalize the first letter</returns>
+        </member>
+        <member name="M:Telerik.ILS.Common.StringExtensions.GetStringBetween(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Extract exactly part from a given string
+            </summary>
+            <param name="input">The string by witch the value will be extract</param>
+            <param name="startString">Start from right string</param>
+            <param name="endString">End to right string</param>
+            <param name="startFrom">integer index for position to start searching</param>
+            <returns>Desired string, if it exist</returns>
+        </member>
+        <member name="M:Telerik.ILS.Common.StringExtensions.ConvertCyrillicToLatinLetters(System.String)">
+            <summary>
+            Convert cyrillic letters to latin letters
+            </summary>
+            <param name="input">the letter that to be changed</param>
+            <returns>new latin letter</returns>
+        </member>
+        <member name="M:Telerik.ILS.Common.StringExtensions.ConvertLatinToCyrillicKeyboard(System.String)">
+            <summary>
+            Convert latin letters to cyrillic letters
+            </summary>
+            <param name="input">the letter that to be changed</param>
+            <returns>new cyrillic letter</returns>
+        </member>
+        <member name="M:Telerik.ILS.Common.StringExtensions.ToValidUsername(System.String)">
+            <summary>
+            That is method with who remove incorrect symbols from 'username'
+            </summary>
+            <param name="input">enter desired username</param>
+            <returns>new valid username in string type</returns>
+        </member>
+        <member name="M:Telerik.ILS.Common.StringExtensions.ToValidLatinFileName(System.String)">
+            <summary>
+            That is method with who use for validation of file name
+            (convert file name from cyrillic to latin)
+            </summary>
+            <param name="input">enter desired 'file name' for change</param>
+            <returns>new valid username in string type</returns>
+        </member>
+        <member name="M:Telerik.ILS.Common.StringExtensions.GetFirstCharacters(System.String,System.Int32)">
+            <summary>
+            That method take first characters from a given string
+            </summary>
+            <param name="input">Enter string that will be used</param>
+            <param name="charsCount">Enter how much characters will be extracted</param>
+            <returns>new string that is part of entered string</returns>
+        </member>
+        <member name="M:Telerik.ILS.Common.StringExtensions.GetFileExtension(System.String)">
+            <summary>
+            Method give extension of fixed file
+            </summary>
+            <param name="fileName">need to be enter desired file in string format</param>
+            <returns>extension of the file if it exist; otherwise give empty string</returns>
+        </member>
+        <member name="M:Telerik.ILS.Common.StringExtensions.ToContentType(System.String)">
+            <summary>
+            Returns the content type of a file depending on its extension.
+            </summary>
+            <param name="fileExtension">The file extension</param>
+            <returns>The content type associated with the given file extension</returns>
+        </member>
+        <member name="M:Telerik.ILS.Common.StringExtensions.ToByteArray(System.String)">
+            <summary>
+            Converts a string into an array of bytes
+            </summary>
+            <param name="input">The string the method is called upon</param>
+            <returns>An array of bytes derived from converting every character 
+            in the given string to its byte representation</returns>
+            <exception cref="T:System.OverflowException">The array is multidimensional and contains more than <see cref="F:System.Int32.MaxValue"/> elements.</exception>
+        </member>
+    </members>
+</doc>
