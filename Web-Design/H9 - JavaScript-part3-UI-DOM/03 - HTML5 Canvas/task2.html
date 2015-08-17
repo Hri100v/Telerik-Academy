@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Task 2</title>
+	<style>
+		#the-canvas{
+			/*background-color: lightgray;*/
+			/*display: none;*/
+		}
+	</style>
+</head>
+<body>
+	<canvas id="the-canvas" width="2000" height="600">
+		Not canvas supported
+	</canvas>
+	<!-- <img src="img/bouncing-ball.png"> -->
+	<script>
+	var canvas = document.getElementById('the-canvas'),
+		ctx = canvas.getContext('2d');
+
+	ctx.save();
+	ctx.lineWidth = 4;
+
+	// rectangle
+	ctx.beginPath();
+	ctx.moveTo(20, 20);
+	ctx.lineTo(20, 550);
+	ctx.lineTo(980, 550);
+	ctx.lineTo(980, 20);
+	ctx.closePath();
+	ctx.stroke();
+
+	// path
+	ctx.beginPath();
+	ctx.setLineDash([20, 10]);
+	ctx.moveTo(20, 220);
+	ctx.lineTo(275, 550);
+	ctx.lineTo(980, 75);
+	ctx.lineTo(940, 20);
+	ctx.lineTo(160, 550);
+	ctx.lineTo(20, 370);
+	ctx.lineTo(560, 20);
+	ctx.stroke();
+
+	// add arrows
+	ctx.restore();
+	
+	var fontFamily = 'Arial',
+		currentFontSize = 32,
+		rotateAngle = function (angle) {
+			angle = angle || 45;
+			return angle * Math.PI / 180;
+		},
+		text = '➤', //'Telerik'; //'➤';
+		text2 = '➤';
+
+	ctx.font = currentFontSize + 'px ' + fontFamily;
+	ctx.textAlign = 'right';
+	ctx.translate(270, 559);
+
+	ctx.save();
+	ctx.rotate(rotateAngle(47));
+	ctx.fillText(text, 0, 0);
+	ctx.restore();
+	
+	ctx.restore();
+	ctx.translate(-120, -15);
+	ctx.rotate(rotateAngle(142));
+	ctx.fillText(text, 0, 0);
+
+	ctx.restore();
+	ctx.translate(20, 200);
+	ctx.rotate(rotateAngle(85));
+	ctx.fillText(text, 20, 36);
+
+	ctx.restore();
+	ctx.translate(-103, 670);
+	ctx.rotate(rotateAngle(95));
+	ctx.fillText(text, -5, 5);
+
+	// ctx.restore();
+	ctx.font = currentFontSize + 'px ' + fontFamily;
+	ctx.textAlign = 'center';
+	ctx.translate(235, 180);
+	ctx.rotate(rotateAngle(10));
+	ctx.fillText(text, 60, 120);
+	ctx.save();
+
+	ctx.translate(73, 45);
+	ctx.rotate(rotateAngle(257));
+	ctx.fillText(text, 0, 0);
+
+	</script>
+</body>
+</html>

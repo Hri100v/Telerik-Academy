@@ -1,0 +1,52 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Train animation skills</title>
+	<style type="text/css">
+		svg {
+			border: 10px solid darkgray;
+		}
+	</style>
+</head>
+<body>
+	<svg width="500" height="300" id="the-svg">
+	</svg>
+	<script>
+		function randomInt() {
+		  var result = Math.random();
+		  result = Math.round(result * 10)
+		  return result;
+		}
+
+		var svg = document.getElementById('the-svg');
+		var svgNs = 'http://www.w3.org/2000/svg';
+
+		var circle = document.createElementNS(svgNs, 'circle');
+		circle.setAttribute('cx', 10);
+		circle.setAttribute('cy', 10);
+		circle.setAttribute('r', 10);
+		svg.appendChild(circle);
+
+		var delta = 1;
+		var color = ['purple', 'green', 'yellow', 'lightgray', 'black', 'skyblue', 'Aqua', 'Crimson', 'DarkKhaki', 'DarkSalmon', 'Lime'];
+
+		function animFrame() {
+			var cx = +circle.getAttribute('cx');
+			if (cx < 7 || cx > +svg.getAttribute('width') - 7) {
+				delta *= -1;
+			}
+
+			circle.setAttribute('cx', cx + delta * 5);
+			
+			if (!(cx % 30)) {
+				circle.setAttribute('fill', color[randomInt()]);
+			}
+			
+			requestAnimationFrame(animFrame);
+		}
+
+		animFrame();
+
+	</script>
+</body>
+</html>

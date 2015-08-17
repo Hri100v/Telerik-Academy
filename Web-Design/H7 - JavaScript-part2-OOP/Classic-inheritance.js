@@ -33,5 +33,5 @@ var Cat = (function (parent) {
 
 var someCat = new Cat('Pesho', 5, true);
 
+console.log(someCat)
 console.log(someCat.eat())
-

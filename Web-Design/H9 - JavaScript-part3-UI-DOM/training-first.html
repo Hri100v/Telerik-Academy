@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Training</title>
+	<style>
+		canvas {
+			background-color: yellowgreen;
+		}
+		#the-canvas2 {
+			/*width: 200px;*/
+			background-color: white;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="the-canvas" width="500" height="350">
+		Not canvas supported
+	</canvas>
+	<canvas id="the-canvas2" width="500" height="350">
+	</canvas>
+
+	<script>
+	var canvas = document.getElementById('the-canvas'),
+		ctx = canvas.getContext('2d');
+
+	ctx.fillRect(50, 100, 75, 150);
+	ctx.strokeStyle = 'white';
+	ctx.lineWidth = 5;
+	ctx.strokeRect(50, 100, 75, 150);
+
+	var canvas2 = document.getElementById('the-canvas2'),
+		ctx2 = canvas2.getContext('2d');
+	ctx2.save();
+
+	ctx2.fillRect(50, 100, 75, 150);
+	ctx2.strokeStyle = 'yellowgreen';
+	ctx2.lineWidth = 5;
+	ctx2.strokeRect(50, 100, 75, 150);
+
+	ctx2.restore();
+	ctx2.beginPath();
+	ctx2.lineWidth = 3;
+	ctx2.strokeStyle = 'skyblue';
+	ctx2.arc(100, 100, 50, 0, 2 * Math.PI);
+	ctx2.stroke();
+
+	ctx2.beginPath();
+	ctx2.lineJoin = "round";
+	ctx2.moveTo(10, 10);
+	ctx2.lineTo(100, 50);
+	ctx2.lineTo(20, 100);
+	ctx2.lineTo(40, 10);
+	ctx2.lineWidth = 3;
+
+	ctx2.strokeStyle = 'darkslateblue';
+	ctx2.stroke();
+
+
+	ctx2.beginPath();
+	ctx2.ellipse(211, 151, 50, 80, 0, 0, 2 * Math.PI);
+	ctx2.strokeStyle = 'darkslategray';
+	ctx2.stroke();
+
+	</script>
+</body>
+</html>

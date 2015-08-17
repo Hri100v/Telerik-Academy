@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Task 1</title>
+	<style>
+		#the-canvas{
+			/*background-color: lightgray;*/
+			/*display: none;*/
+		}
+		#the-canvas{
+			/*display: none;*/
+		}
+	</style>
+</head>
+<body>
+	<canvas id="the-canvas" width="300" height="550">
+		Not canvas supported
+	</canvas>
+	<!-- <img src="img/bicycle.png"> -->
+	<canvas id="the-canvas2" width="900" height="550">
+		Not canvas supported2
+	</canvas>
+	<script>
+	var canvas = document.getElementById('the-canvas'),
+		ctx = canvas.getContext('2d');
+	var canvas2 = document.getElementById('the-canvas2'),
+		ctx2 = canvas2.getContext('2d');
+	var fullPi = 2 * Math.PI;
+	var colorFaceStroke = 'rgba(34,84,95, 1)',
+		colorHatStroke = 'rgba(38, 38, 38, 1)',
+		colorHat = 'rgba(57,102,147, 1)',
+		colorCycle = 'skyblue',
+		colorCycleStroke = 'rgba(51,127,146, 1)';
+
+	// default
+	ctx.save();
+
+	// ----- drawing face -----
+	ctx.beginPath();
+	ctx.arc(135, 370, 112, 0, fullPi);
+	ctx.fillStyle = 'skyblue';
+	ctx.fill();
+
+	ctx.beginPath();
+	ctx.arc(135, 370, 114, 0, fullPi);
+	ctx.strokeStyle = colorFaceStroke;
+	ctx.lineWidth = 4;
+	ctx.stroke();
+
+	ctx.beginPath();
+	ctx.lineJoin = "round";
+	ctx.moveTo(108, 388);
+	ctx.lineTo(85, 388);
+	ctx.lineTo(108, 338);
+	ctx.stroke();
+
+	// left eye
+	ctx.beginPath();
+	ctx.ellipse(65, 335, 18, 12, 0, 0, fullPi);
+	ctx.stroke();
+	ctx.beginPath();
+	ctx.ellipse(60, 335, 6, 9, 0, 0, fullPi);
+	ctx.fillStyle = colorFaceStroke;
+	ctx.fill();
+
+	// right eye
+	ctx.beginPath();
+	ctx.ellipse(165, 335, 18, 12, 0, 0, fullPi);
+	ctx.stroke();
+	ctx.beginPath();
+	ctx.ellipse(160, 335, 6, 9, 0, 0, fullPi);
+	ctx.fill();
+
+	// mouth
+	ctx.beginPath();
+	ctx.ellipse(110, 435, 40, 15, 60, 0, fullPi);
+	ctx.stroke();
+
+	// hat
+	ctx.beginPath();
+	ctx.ellipse(135, 280, 115, 25, 0, 0, fullPi);
+	ctx.fillStyle = colorHat;
+	ctx.fill();
+	ctx.beginPath();
+	ctx.ellipse(135, 280, 115, 25, 0, 0, fullPi);
+	ctx.strokeStyle = colorHatStroke;
+	ctx.stroke();
+
+	ctx.beginPath();
+	ctx.ellipse(135, 259, 65, 20, 0, 0, fullPi / 2);
+	ctx.lineTo(70, 150);
+	ctx.lineTo(200, 150);
+	ctx.closePath();
+	ctx.fill();
+	ctx.stroke();
+
+	ctx.beginPath();
+	ctx.ellipse(135, 150, 65, 20, 0, 0, fullPi);
+	ctx.fill();
+	ctx.stroke();
+
+	ctx.restore();
+
+	// ----- drawing cycle -----
+	ctx2.lineWidth = 4;
+	ctx2.strokeStyle = colorCycleStroke;
+	ctx2.fillStyle = colorCycle;
+
+	// left wheel
+	ctx2.beginPath();
+	ctx2.arc(100, 250, 95, 0, fullPi);
+	ctx2.fill();
+	ctx2.beginPath();
+	ctx2.arc(100, 250, 95, 0, fullPi);
+	ctx2.stroke();
+
+	// right wheel
+	ctx2.beginPath();
+	ctx2.arc(460, 250, 95, 0, fullPi);
+	ctx2.fill();
+	ctx2.beginPath();
+	ctx2.arc(460, 250, 95, 0, fullPi);
+	ctx2.stroke();
+
+	ctx2.beginPath();
+	ctx2.moveTo(100, 250);
+	ctx2.lineTo(210, 130);
+	ctx2.lineTo(440, 130);
+	// center of the roller - (250, 245)
+	ctx2.lineTo(260, 245);
+	ctx2.lineJoin = 'bevel';
+	ctx2.closePath();
+	ctx2.stroke();
+
+	ctx2.beginPath();
+	ctx2.arc(260, 245, 25, 0, fullPi);
+	ctx2.stroke();
+
+	// pedal
+	ctx2.beginPath();
+	ctx2.save();
+	ctx2.setLineDash([30, 47]);
+	ctx2.moveTo(225, 205);
+	ctx2.lineTo(295, 285);
+	ctx2.stroke();
+
+	ctx2.restore();
+	ctx2.beginPath();
+	ctx2.moveTo(265, 247);
+	ctx2.lineTo(175, 85);
+	ctx2.stroke();
+
+	ctx2.beginPath();
+	ctx2.moveTo(135, 85);
+	ctx2.lineTo(215, 85);
+	ctx2.stroke();
+
+	ctx2.beginPath();
+	ctx2.moveTo(460, 250);
+	ctx2.lineTo(430, 75);
+	ctx2.stroke();
+
+	ctx2.beginPath();
+	ctx2.moveTo(350, 95);
+	ctx2.lineTo(430, 75);
+	ctx2.lineTo(480, 20);
+	ctx2.stroke();
+
+	</script>
+</body>
+</html>
