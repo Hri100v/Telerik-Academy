@@ -1,0 +1,72 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 3 - Handlebars</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="calendar"></div>
+    <script id="calendar-template" type='text/x-handlebars-template'>	
+        <div class="event-calendar">
+            <h2 class="header">
+                Appointments for <span class="month">{{month}}</span> <span class="year">{{year}}</span>
+            </h2>
+            {{#each days}}
+            <div class="col-date">
+                <div class="date">{{day}}</div>
+                <div class="events ">
+                    {{#each events}}
+                        <div class="event {{importance}}" title="duration: {{duration}}">
+                            {{#if title}}
+                            <div class="title">{{title}}</div>
+                            {{else}}
+                            <div class="title">Free slot</div>
+                            {{/if}}
+                            {{#if time}}
+                            <span class="time">at: {{time}}</span>
+                            {{/if}}
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+            {{/each}}
+            <div class="col-date">
+                <div class="date">3</div>
+                <div class="events">
+                    <div class="event none">
+                        <div class="title">Free slot</div>
+                    </div>
+                    <div class="event critical" title="duration: 60">
+                        <div class="title">My Event 1</div>
+                        <span class="time">at: 12:45</span>
+                    </div>
+                    <div class="event none">
+                        <div class="title">Free slot</div>
+                    </div>
+                    <div class="event important" title="duration: 120">
+                        <div class="title">My Event 2</div>
+                        <span class="time">at: 14:00</span>
+                    </div>
+                    <div class="event none">
+                        <div class="title">Free slot</div>
+                    </div>
+                    <div class="event unimportant" title="duration: 60">
+                        <div class="title">My Event 4</div>
+                        <span class="time">at: 17:00</span>
+                    </div>
+                    <div class="event none">
+                        <div class="title">Free slot</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script src="handlebars.js"></script>
+    <script src="task-3.js"></script>
+    <script>
+        solve()('calendar-template');
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>
