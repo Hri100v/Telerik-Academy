@@ -219,7 +219,7 @@
 * **Структура**
 	UML diagram of Builder pattern
 	![images][img]
-	[img]: https://github.com/Hri100v/Telerik-Academy/blob/master/Programming/H8%20-%20HighQualityCode/17%20-%20Design%20Patterns%20%5E%20Creational/images/Builder_UML_class_diagram.svg.png "Builder UML diagram"
+	[img]: https://github.com/Hri100v/Telerik-Academy/blob/master/Programming/H8%20-%20HighQualityCode/17%20-%20Design%20Patterns%20%5E%20Creational/images/Builder_UML_class_diagram.svg.png ("Builder UML diagram")
 
 * **Сродни модели** (related patterns)
 	+ Simple Factory
