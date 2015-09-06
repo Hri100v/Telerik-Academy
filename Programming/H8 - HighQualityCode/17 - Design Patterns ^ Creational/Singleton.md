@@ -217,6 +217,8 @@
 	* конструиране на елементите в определен ред
 
 * **Структура**
+	![images][img]
+	[img]: (images/Builder_UML_class_diagram.svg.png "Builder UML diagram")
 
 * **Сродни модели** (related patterns)
 	+ Simple Factory
