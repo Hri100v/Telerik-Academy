@@ -18,6 +18,7 @@
 
 * **Имплементация** (реално изпълнение)
 	* Singleton - First version
+
 	~~~c#
 	public sealed class Singleton
 	{
@@ -43,6 +44,7 @@
 
 	* Singleton - Second version _simple thread-safety_
 	Becouse two different threads could both have evaluated the test if (instance == null) and found it to be true.
+
 	~~~c#
 	public sealed class Singleton
 	{
@@ -79,6 +81,10 @@
 
 	* tight coupling
 		зависим от този клас (_Singleton_)
+		
+* **Структура**
+
+![drawingA](images/Builder.jpg "Builder UML diagram")
 
 * **Проблеми**
 	- Да не се създава предварително, а в първият момент когато бъде извикана инстанцията
@@ -103,6 +109,7 @@
 	- конструирането на HTML докимент
 
 * **Имплементация** (реално изпълнение)
+
 	~~~c#
 	using System;
 	using System.Collections;
@@ -210,6 +217,7 @@
 	    }
 	  }
 	~~~
+
 * **Участници**
 	- class Director
 	- interface Builder
@@ -220,17 +228,21 @@
 	* конструиране на елементите в определен ред
 
 * **Структура**
-<<<<<<< HEAD
+
+![drawingA](images/Builder.jpg "Builder UML diagram")
+![drawingB](https://github.com/Hri100v/Telerik-Academy/blob/master/Programming/H8%20-%20HighQualityCode/17%20-%20Design%20Patterns%20%5E%20Creational/images/Builder.jpg)
+
+![drawing1][img1]
+[img1]: (./images/Builder.jpg)
+
 ![drawing][img]
-[img]: (images/Builder_UML_class_diagram.svg.png "Builder UML diagram")
-=======
-	UML diagram of Builder pattern:
-	![alt text][logo]
-	[logo]: https://github.com/Hri100v/Telerik-Academy/blob/master/Programming/H8%20-%20HighQualityCode/17%20-%20Design%20Patterns%20%5E%20Creational/images/Builder_UML_class_diagram.svg.png 
+[img]: (images/Builder.jpg "Builder UML diagram")
 
-("Builder UML diagram")
->>>>>>> origin/master
+UML diagram of Builder pattern:
+![UML diagram of builder pattern ][logo]
+[logo]: https://github.com/Hri100v/Telerik-Academy/blob/master/Programming/H8%20-%20HighQualityCode/17%20-%20Design%20Patterns%20%5E%20Creational/images/Builder.jpg ("Builder UML diagram")
 
+================
 * **Сродни модели** (related patterns)
 	+ Simple Factory
 	+ Factory Method
@@ -243,18 +255,24 @@
 ## Object Pool
 
 * **Мотивация:**
+	- Създава се обекта в момента, когато бъде нужен. Използва се и след това се приготвя в началното си състояние
 
 * **Цел:**
 
 * **Приложение:**
+	- Connection Pool в *ASP.NET* създава се конекция, използва се, след което бива изтривана
 
 * **Известни употреби:**
+	- Connection Pool
+	- връзките в базата данни
+	- Unity за създаването на средата, повтарящите се картинки, в игрите (да не се създават отново)
 
 * **Имплементация** (реално изпълнение)
 
 * **Участници**
 
 * **Последствия**
+	- усложняване на кода, но за сметка на това многократно се подобрява производителността (performance)
 
 * **Структура**
 
