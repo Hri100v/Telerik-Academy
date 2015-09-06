@@ -211,12 +211,17 @@
 	  }
 	~~~
 * **Участници**
+	- class Director
+	- interface Builder
+	- class ConcreteBuilder
 
 * **Последствия**
 	* скрива функционалност, когато има много неща за изграждането на един обект
 	* конструиране на елементите в определен ред
 
 * **Структура**
+![drawing][img]
+[img]: (images/Builder_UML_class_diagram.svg.png "Builder UML diagram")
 
 * **Сродни модели** (related patterns)
 	= Simple Factory
