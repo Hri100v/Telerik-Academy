@@ -220,16 +220,24 @@
 	* конструиране на елементите в определен ред
 
 * **Структура**
+<<<<<<< HEAD
 ![drawing][img]
 [img]: (images/Builder_UML_class_diagram.svg.png "Builder UML diagram")
+=======
+	UML diagram of Builder pattern:
+	![alt text][logo]
+	[logo]: https://github.com/Hri100v/Telerik-Academy/blob/master/Programming/H8%20-%20HighQualityCode/17%20-%20Design%20Patterns%20%5E%20Creational/images/Builder_UML_class_diagram.svg.png 
+
+("Builder UML diagram")
+>>>>>>> origin/master
 
 * **Сродни модели** (related patterns)
-	= Simple Factory
-	= Factory Method
-	= Abstract Factory
+	+ Simple Factory
+	+ Factory Method
+	+ Abstract Factory
 
 * **Проблеми**
-	Създаване на един сложен обект. Спецификацията на този обект се съхранва във вторичен клас. Така за изграждането на един определен обект трябва да се използва един от многото варианти на конструиране и да се създаде инстанция в първичното изграждане ('дирктора')
+	- Създаване на един сложен обект. Спецификацията на този обект се съхранва във вторичен клас. Така за изграждането на един определен обект трябва да се използва един от многото варианти на конструиране и да се създаде инстанция в първичното изграждане ('дирктора')
 
 ---------------
 ## Object Pool
